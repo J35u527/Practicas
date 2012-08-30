@@ -37,7 +37,7 @@
 		 <tr>
 			<td> <img src="manzana.jpg" width="100" height="80" alt="descripcion" /> </td>
 			<td>003</td>
-			<td>Manzana</td>
+			<td>manzana</td>
 			<td>Frutos</td>
 			<td>$455</td>
 			<td>230 kilos</td>
@@ -45,7 +45,7 @@
 		 <tr>
 			<td> <img src="mango.jpg" width="100" height="80" alt="descripcion" /> </td>
 			<td>004</td>
-			<td>Mango</td>
+			<td>mango</td>
 			<td>Tropicales</td>
 			<td>$125</td>
 			<td>1500 kilos</td>
@@ -61,7 +61,7 @@
 		 <tr>
 			<td> <img src="kiwi.jpg" width="100" height="80" alt="descripcion" /> </td>
 			<td>006</td>
-			<td>Kiwi</td>
+			<td>kiwi</td>
 			<td>Exoticos</td>
 			<td>$1325</td>
 			<td>154530 kilos</td>
@@ -79,26 +79,26 @@
 		 <tr>
 			<td> <img src="guayaba.jpg" width="100" height="80" alt="descripcion" /> </td>
 			<td>008</td>
-			<td>Guayaba</td>
+			<td>guayaba</td>
 			<td>Citricos</td>
 			<td>$25</td>
-			<td>1545 kilos</td>
+			<td>1500 kilos</td>
 	    </tr>
 		 <tr>
 			<td> <img src="arandano.jpg" width="100" height="80" alt="descripcion" /> </td>
 			<td>009</td>
-			<td>Arandano</td>
+			<td>arandano</td>
 			<td>Citricos</td>
 			<td>$25</td>
-			<td>1543 kilos</td>
+			<td>1500 kilos</td>
 	    </tr>
 		 <tr>
 			<td> <img src="mandarina.jpg" width="100" height="80" alt="descripcion" /> </td>
 			<td>010</td>
-			<td>Mandarina</td>
+			<td>mandarina</td>
 			<td>Citricos</td>
 			<td>$25</td>
-			<td>4530 kilos</td>
+			<td>1500 kilos</td>
 	    </tr>
 		</tbody>
 		<tfoot>
