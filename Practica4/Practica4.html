@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Contacto</title>
+    </head>
+    <body>
+        <h1>Contacto</h1>
+		<form method="post" action="Contacto.html">
+	<label for="nombre">Nombre</label>
+	<input type="text" id="nombre" name="nombre" /><br /> <br />
+	<label for="mail">Correo   </label> 
+	<input type="email" id="mail" name="mail" /><br /> <br />
+	<label for="phone">Teléfono</label>
+	<input type="tel" id="phone" name="phone" /><br /> <br />
+	<label id="Estado">Estado</label>
+	<select name="Estados">
+   <option selected value="0"> Elige una opción </option>
+   <option value="1">Aguascalientes </option>
+   <option value="2">Baja California Norte </option>
+   <option value="3">Baja California Sur </option>
+   <option value="4">Campeche </option>
+   <option value="5">Chiapas Tuxtla </option>
+   <option value="6">Chihuahua </option>
+   <option value="7">Coahuila </option>
+   <option value="8">Colima </option>
+   <option value="9">Distrito Federal </option>
+   <option value="10">Durango </option>
+   <option value="11">Guanajuato </option>
+   <option value="12">Guerrero </option>
+   <option value="13">Hidalgo </option>
+   <option value="14">Jalisco </option>
+   <option value="15">México </option>
+   <option value="16">Michoacán de Ocampo </option>
+   <option value="17">Morelos </option>
+   <option value="18">Nayarit </option>
+   <option value="19">Nuevo León </option>
+   <option value="20">Oaxaca </option>
+   <option value="21">Puebla </option>
+   <option value="22">Querétaro </option>
+   <option value="23">Quintana Roo </option>
+   <option value="24">San Luis Potosí </option>
+   <option value="25">Sinaloa Culiacán </option>
+   <option value="26">Sonora </option>
+   <option value="27">Tabasco </option>
+   <option value="28">Tamaulipas </option>
+   <option value="29">Tlaxcala </option>
+   <option value="30">Veracruz </option>
+   <option value="31">Yucatán </option>
+   <option value="32">Zacatecas </option>
+   </select><br /><br />
+
+<label for="colonia">Colonia</label>
+<input type="text" id="colonia" name="colonia" /><br /><br />
+<fieldset>
+<legend>Me interesa la página por:</legend>
+<input type="checkbox" name="Interes" value="Cultura" />Cultura<br />
+<input type="checkbox" name="Interes" value="Deportes" />Deportes<br />
+<input type="checkbox" name="Interes" value="Socilaes" />Sociales<br />
+<input type="checkbox" name="Interes" value="Noticias" />Noticias <br />
+<input type="checkbox" name="Interes" value="Espectaculos" />Espectaculos<br /><br /><br />
+</fieldset>
+<label for="textarea">Sus comentarios nos interesan</label><br />
+<textarea id="textarea" rows="7" cols="52">Escriba aqui</textarea><br />
+
+<button type="submit">Enviar</button>			
+<button type="reset">Limpiar</button>	
+</form>
+    </body>
+</html>
