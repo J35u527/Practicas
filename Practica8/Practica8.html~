@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Página Principal</title>
+    </head>
+    <body>
+      <audio controls="controls">
+  <source src="HAASH.ogg" type="audio/ogg" />
+  <source src="HAASH.mp3" type="audio/mp3" />
+  Tu navegador no soporta reproducción de audio sin necesidad de un plugin
+</audio>
+<video width="500" height="220" controls="controls" loop="loop" >
+	<source src="titanic.ogg" type="video/ogg" />
+   <source src="Titanic.mp4" type="video/mp4" />
+  Este navegador no soporta  el video 
+</video>
+
+        </body>
+    </html>
