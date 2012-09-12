@@ -1,0 +1,27 @@
+header{
+width: 97%;	
+margin: 10px;
+padding-left: 10px;
+color:#FFFFFF;
+border: solid #99FF33 5px;
+background-image: url(../images/fondoAzulR.jpg);
+background-repeat: repeat-x repeat-y;
+}
+
+h2{
+color:#FFFFFF;
+}
+
+article{
+width:96%;
+height: auto;
+margin: 10px;
+padding: 10px;
+border: groove #FF9900 5px;
+background-color: #99CC33;
+background-repeat: repeat-x repeat-y;
+}
+footer{
+text-align: center;
+border: dotted #000000 5px;
+}

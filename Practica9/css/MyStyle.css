@@ -1,0 +1,64 @@
+header{
+width: 98%;	
+margin: 10px;
+padding-left: 10px;
+color:#FFFFFF;
+border: solid #99FF33 5px;
+background-image: url(../images/fondoAzulR.jpg);
+background-repeat: repeat-x repeat-y;
+}
+
+h2{
+color:#FFFFFF;
+}
+
+#linkAMision{
+width: 80px;
+height: 80px;
+margin-left: 10px;			
+border: solid #99FF33 5px;
+}
+
+#linkAVision{
+width: 80px;
+height: 80px;
+margin-left: 10px;			
+border: solid #FFFF00 5px;	
+}
+	
+nav{
+border: dotted green 5px;	
+font-size: 40px;
+}
+	
+aside{
+width: 20%;
+height: auto;
+margin: 10px;
+padding: 20px;
+color:#FFFFFF;
+border: dashed #FF0000 5px;
+background-image: url(../images/principal.jpg);
+background-repeat: x;
+text-align: justify;
+}
+		
+article{
+width:75%;
+height: auto;
+margin: 20px;
+padding: 20px;
+border: groove #FF9900 5px;
+background-color: #009900;	
+}
+		
+section{
+margin: 10px;
+padding: 20px;
+border: double #FFFF00 5px;
+}
+		
+footer{
+text-align: center;
+border: dotted #000000 5px;
+}
