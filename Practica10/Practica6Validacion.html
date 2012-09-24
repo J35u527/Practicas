@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Formulario de completar registro de usuario</title>
+		<script type="text/javascript">
+		
+		window.onload = function(){
+			oculta('adv_nombre');
+			oculta('adv_phone');
+			oculta('adv_birthday');
+			oculta('adv_direccion');
+			oculta('adv_pass');
+			oculta('adv_imagen');
+			oculta('adv_checks');
+			oculta('adv_radios');
+         }
+
+		function clearAll(){
+			oculta('adv_nombre');
+			oculta('adv_phone');
+			oculta('adv_birthday');
+			oculta('adv_direccion');
+			oculta('adv_pass');
+			oculta('adv_imagen');
+			oculta('adv_checks');
+			oculta('adv_radios');
+		}
+		
+		
+		function muestra(id){
+			if (document.getElementById){ 
+				var elemento = document.getElementById(id); 
+				elemento.style.display = 'block';
+			}
+		}
+		
+		function oculta(id){
+			if (document.getElementById){ 
+			  var elemento = document.getElementById(id); 
+			  elemento.style.display = 'none';
+			}
+		}
+		
+		function valida_envia() {
+
+			//checkboxes
+			if(!document.contacto.razones1.checked && !document.contacto.razones2.checked && !document.contacto.razones3.checked &&
+				!document.contacto.razones4.checked && !document.contacto.razones5.checked){
+				muestra('adv_checks');
+			  	return 0;
+			}
+			else{
+				
+				oculta('adv_checks');
+			}
+			
+			//input file
+			if(document.contacto.imagen.value.length==0){
+				muestra('adv_imagen');
+				document.contacto.imagen.focus();
+				return 0;
+			}
+			else{
+				oculta('adv_imagen');
+			}
+			
+			//password
+			var pass1 = document.getElementById("pass").value;
+			if(pass1.length == 0 ){
+				muestra('adv_pass');
+				document.contacto.pass.focus();
+				return 0;
+			}
+			else if(!(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/.test(pass1))){
+				muestra('adv_pass');
+				document.contacto.pass.focus();
+				return 0;
+				
+			}
+			else
+				oculta('adv_pass');
+			
+				
+			//nombre
+			if(document.contacto.nombre.value.length==0){
+				muestra('adv_nombre');
+				document.contacto.nombre.focus();
+				return 0;
+			}
+			else{
+				oculta('adv_nombre');
+			}
+			
+			
+			//direccion
+			if(document.contacto.dir.value.length==0){
+				muestra('adv_direccion');
+				document.contacto.dir.focus();
+				return 0;
+			}
+			
+			else
+				oculta('adv_direccion');	
+			
+			
+			//telefono
+			
+			telefono = document.contacto.phone.value;
+			valor = parseInt(telefono);
+			if (isNaN(valor)) {
+				muestra('adv_phone');
+				alert('entroeee');
+				document.contacto.phone.focus();
+				return 0;
+			}
+			else if(!(/^\d{8}$/.test(telefono)) || !(/^\(\d{3}\)\s\d{6}$/) || !(/^\+\d{2,3}\s\d{9}$/)){
+				muestra('adv_phone');
+				alert('entroeeepppp');
+				document.contacto.phone.focus();
+				return 0;
+				
+			}
+			
+			else{
+				oculta('adv_phone');
+			}
+			
+			//fecha
+			
+			if(document.contacto.cumple.value.length==0){
+				muestra('adv_birthday');
+				document.contacto.cumple.focus();
+				return 0;	
+				alert('entroa');
+			}
+			else{
+				
+				var fechaArr = document.contacto.cumple.value.split('-/');
+				var dia = fechaArr[0];
+				var mes = fechaArr[1];
+				var anio = fechaArr[2];
+			
+				valorFecha = new Date(anio, mes, dia);
+			
+				if( !isNaN(valorFecha) ) {
+	  				muestra('adv_birthday');
+					document.contacto.cumple.focus();
+					return 0;
+				}
+				else{
+					oculta('adv_birthday');	
+				}
+				
+			}
+			
+			//radiobutton
+			opciones = document.getElementsByName("sexo");
+			 
+			var seleccionado = false;
+			for(var i=0; i<opciones.length; i++) {	
+			  if(opciones[i].checked) {
+			    seleccionado = true;
+			    oculta('adv_radios');
+			    break;
+			  }
+			}
+			 
+			if(!seleccionado) {
+			  muestra('adv_radios');
+			  return 0;
+			}
+			
+			
+			document.contacto.submit(); 
+			
+		}
+		</script>
+        <noscript>Tu browser no soporta javaScript</noscript>
+        <link href="css/completarRegistro.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    	<div id='wrapper'>
+    		<div id='contenido'>
+        <h1>Formulario de completar registro de usuario</h1>
+		<form method="post" name="contacto" action="Practica5Validacion.html" >
+		<fieldset>
+		<legend>Usuario y Correo</legend>
+			<label id="nombre_u">Nick de usuario</label>
+			<input class="form_inputs" type="text" disabled="disabled" id="nombre_Us" name="nombre_Us" value="Pato"/><br />
+			<label for="mail">Correo</label>
+			<input class="form_inputs" type="email" disabled="disabled" id="mail" name="mail" value="algo@ejemplo.com"/>
+		</fieldset>
+	
+	<fieldset id="checkboxes">
+		<legend>Razones</legend>
+		<label class="error" id="adv_checks">Seleccione al menos una opción</label>
+		<p id="razon">¿Porqué desea registrarse en la página?</p>
+		
+		<input type="checkbox" name="razones1" value="1">Me gusta
+		<br>
+		<input type="checkbox" name="razones2" value="2">Me interesa los temas que tratan
+		<br>
+		<input type="checkbox" name="razones3" value="3">Me la recomendaron 
+		<br>
+		<input type="checkbox" name="razones4" value="4">Quiero comentar en un foro
+		<br>
+		<input type="checkbox" name="razones5" value="5">Me interesa subir información
+		<br> 
+	</fieldset>
+     <fieldset id="avatar-Pass">
+     <legend>Avatar y password</legend>
+     	<label class="error" id="adv_imagen">Seleccione una imagen</label>
+   		<input id="imagen" name="cargarImagen" type="file" accept="image/*" required="required" /><br />
+   		<label for="pass">Contraseña</label>
+   		<label class="error" id="adv_pass">Ingrese contraseña</label>
+		<input class="form_inputs" type="password" id="pass" name="pass" required="required"/>
+	  </fieldset>
+  	  
+
+  <fieldset id="formularioUsuario">
+  <legend>Ingresar datos de contacto</legend>
+ 	<label for="nombre_c">Nombre Completo</label>
+ 	<label class="error" id="adv_nombre">Ingrese un nombre</label>
+	<input class="form_inputs" type="text" id="nombre" name="nombre" required="required"  /> 
+	<label for="direccion">Dirección</label>
+	<label class="error" id="adv_direccion">Ingrese una dirección</label>
+	<input class="form_inputs"type="text" id="dir" name="dir" required="required" /> 
+	<label for="phone">Teléfono</label>
+	<label class="error" id="adv_phone">Ingrese un teléfono valido</label>
+	<input class="form_inputs" type="tel" id="phone" name="phone"  /> 
+	<label for="cumple">Cumpleaños</label>
+	<label class="error" id="adv_birthday">Ingrese una fecha valida</label> 
+	<input class="form_inputs" type="date" id="cumple" name="cumple" />	
+ </fieldset>
+ <label class="error" id="adv_radios">Seleccione una radio</label>
+ <label for="sexoLabel">Sexo</label>
+ 
+ <fieldset id="cajaRadios">
+	<input class="radios" type="radio" name="sexo" value="Hombre" />Hombre
+	<input class="radios" type="radio" name="sexo" value="Mujer" />Mujer
+</fieldset>
+
+	<button type="submit" value="enviar" hidden="hidden">Enviar</button>
+	<button type="reset" onclick="clearAll()">Limpiar</button>
+
+</form>
+<button type="submit" onclick="valida_envia()">Enviar</button>
+</div>
+</div>
+    </body>
+</html>

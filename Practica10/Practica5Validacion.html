@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Formulario de creación de usuario</title>
+        <script type="text/javascript">
+        
+        window.onload = function(){
+			oculta('adv_nombre');
+			oculta('adv_email');
+			oculta('adv_password');
+			oculta('adv_repassword');
+			oculta('adv_noCoinciden');
+         }
+
+		function muestra(id){
+			if (document.getElementById){ 
+				var elemento = document.getElementById(id); 
+				elemento.style.display = 'block';
+			}
+		}
+		
+		function oculta(id){
+			if (document.getElementById){ 
+			  var elemento = document.getElementById(id); 
+			  elemento.style.display = 'none';
+			}
+		}
+		
+		
+		
+		function validarForm(){
+		//Nombre
+			if(document.addUser.nombre.value.length==0){
+				muestra('adv_nombre');
+				document.addUser.nombre.focus();
+				return 0;
+			}
+			else{
+				oculta('adv_nombre');
+			}
+//Email
+	
+var valor= document.addUser.mail.value;
+var filtro = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;	
+if (!filtro.test(valor)) {
+	document.addUser.mail.focus();
+   muestra('adv_email');
+   return 0;
+}
+else{
+	
+	oculta('adv_email');
+}
+
+ 
+//Passwords
+
+var pass1 = document.getElementById("pass").value;
+var pass2 = document.getElementById("confirm_password").value;
+
+	if(pass1.length == 0 ){
+	muestra('adv_password');
+	document.addUser.pass.focus();
+	return 0;
+	}
+	
+	if(pass2.length == 0){
+	muestra('adv_repassword');
+	document.addUser.confirm_password.focus();
+	return 0;
+	}
+	
+	if (pass1 != pass2) {
+
+  		muestra('adv_noCoinciden');
+  		document.addUser.pass.focus();
+  		return 0;
+	} 
+document.addUser.submit(); 
+
+}
+        		
+        </script>    
+        <noscript>Tu navagedor no soporta javaScript</noscript>
+        <link href="css/Principal.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+      <h1>Agregar Usuario</h1>
+      <div id="wrapper">
+      	<div id="contenido">
+		<form name="addUser"method="post" action="Practica6Validacion.html">
+		<label for="nombre"class="topicInput">Nick de usuario</label>
+		<label id="adv_nombre">Ingrese un nombre</label>
+		<input type="text" id="nombre" name="nombre"  required="required" autofocus="autofocus" />
+		<label for="mail" class="topicInput">Correo   </label> 
+		<label id="adv_email">Email no valido</label>
+		<input type="email" id="mail" name="mail" placeholder="name@example.com" required="required" autofocus="autofocus" maxlength="50"/><br /> <br />
+		<label id="adv_noCoinciden">Las contraseñas NO COINCIDEN!!</label>
+		<label for="pass" class="topicInput">Contraseña</label><br />
+		<label id="adv_password">Ingrese contraseña</label>
+		<input type="password" id="pass" name="passw" required="required"/>
+		<label id="confirm_pass" class="topicInput">Confirmar contraseña</label>
+		<label id="adv_repassword" >Ingrese contraseña</label>
+		<input type="password" id="confirm_password" name="con_password" required="required"/><br /> <br />
+		<button type="submit" value="enviar" hidden="hidden">Enviar</button>					
+		</form>
+		<button  value="enviar" onclick="validarForm()">Enviar</button>
+		</div>
+		</div>
+    </body>
+</html>

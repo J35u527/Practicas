@@ -1,0 +1,95 @@
+.error {
+background-color: #fffe36;
+border: 1px solid #e1e16d;
+font-size: .8em;
+color: #000;
+padding: .3em;
+margin-left: 5px;
+border-radius: 5px; 
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+-moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+-webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+body{
+	
+	background-color:#E1E16D;
+}
+
+h1{
+	text-align:center;
+	color:#FFFFFF;
+}
+
+#wrapper{
+	width:800px;
+	height:auto;
+	margin-left: 100px;
+	padding: 10px;
+	font-size:1.5em;
+	border:solid 8px green;
+	background-color:#C28F2F;
+	-webkit-border-radius: 50px;
+    border-radius: 50px;
+	-webkit-box-shadow:  10px 10px 10px  #000000;
+    box-shadow:  10px 10px 10px  #000000;
+}
+
+#contenido{
+	width:50%;
+	margin-left:100px;
+	padding:10px;
+}
+label{
+	font-size:30px;
+	font-weight:bolder;
+	color: #000000;
+}
+.topicInput{
+	
+	color:#000000;
+
+}
+#checkboxes{
+
+	font-size:1em;
+	font-weight:bolder;
+	text-align:left;
+}
+.form_inputs{
+	width:70%;
+	height:20px;
+	margin-bottom:20px;
+	padding-top:10px;
+	text-align:center;	
+	border: solid 2px #000000;
+	background-color:#D8D8D8;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+    font-weight:bold;
+    font-size:medium;
+}
+#razon{
+	color:#FFFFFF;
+	font-weight:bold;
+}
+#cajaRadios{
+	width:25%;
+}
+.radios{
+	font-size:2em;
+	font-weight:bolder;
+	text-align:left;
+	background-color:#D8D8D8;
+	
+}
+
+#avatar-Pass{
+
+}
+button{
+	font-size:2em;
+
+}
