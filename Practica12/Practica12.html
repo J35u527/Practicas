@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Formulario de creación de usuario</title>
+        <script type="text/javascript" src="js/encriptador.js"></script>
+        <script type="text/javascript" src="js/validacion.js"></script>
+        <script type="text/javascript" src="js/utf8.js"></script>
+        <noscript>Tu navagedor no soporta javaScript</noscript>
+        <link href="css/Principal.css" rel="stylesheet" type="text/css">
+    </head>
+    encripto
+borro
+guardo en md5
+php.js.org
+
+boton hidden donde se guarda a contrasenia encriptada
+    <body>
+      <h1>Agregar Usuario</h1>
+      <div id="wrapper">
+       <div id="contenido">
+<form name="addUser"method="get" action="Practica6Validacion.html">
+<label for="nombre"class="topicInput">Nick de usuario</label><br /> <br />
+<label id="adv_nombre">Ingrese un nombre</label>
+<input type="text" id="nombre" name="nombre" required="required" autofocus="autofocus" /><br /> <br />
+<label for="mail" class="topicInput">Correo </label><br /> <br />
+<label id="adv_email">Email no valido</label>
+<input type="email" id="mail" name="mail" placeholder="name@example.com" required="required" autofocus="autofocus" maxlength="50"/><br /> <br />
+<label id="adv_noCoinciden">Las contraseñas NO COINCIDEN!!</label>
+<label for="pass" class="topicInput">Contraseña</label><br />
+<label id="adv_password">Ingrese contraseña</label>
+<input type="password" id="pass" name="passw" required="required"/><br /> <br />
+<label id="confirm_pass" class="topicInput">Confirmar contraseña</label>
+<label id="adv_repassword" >Ingrese contraseña</label><br /> <br />
+<input type="password" id="confirm_password" name="con_password" required="required"/><br /> <br />
+<input type="password" hidden="hidden"  id="password_md5" name="password_md5" /><br /> <br />
+<button type="submit" value="enviar" hidden="hidden">Enviar</button>	
+</form>
+<button value="enviar" onclick="validarForm()">Enviar</button>
+</div>
+</div>
+    </body>
+</html>
