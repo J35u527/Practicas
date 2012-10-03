@@ -50,8 +50,7 @@ window.onload = function(){
 			//input file
 			if(document.contacto.imagen.value.length==0){
 				muestra('adv_imagen');
-				/*document.contacto.imagen.focus();
-				return 0;*/
+
 			}
 			else{
 				oculta('adv_imagen');
@@ -61,8 +60,7 @@ window.onload = function(){
 			var pass1 = document.getElementById("pass").value;
 			if(pass1.length == 0 || !(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/.test(pass1))){
 				muestra('adv_pass');
-				/*document.contacto.pass.focus();
-				return 0;*/
+
 			}
 	
 			else
@@ -89,7 +87,7 @@ window.onload = function(){
 			
 			//telefono
 			var i;
-			for(i=1; i<=num; i++){
+			for(i=1; i<=contador; i++){
 				var telefonoIngresado = document.getElementById('tel'+i).value; 
 				if(!validarTelefono(telefonoIngresado)){
 			       document.getElementById('advError'+i).style.display = 'block';
