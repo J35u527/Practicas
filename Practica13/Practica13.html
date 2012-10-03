@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Práctica 13</title>
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			var titulo = document.createElement("h1");
+			var texto = document.createTextNode("Hola Mundo!");
+			titulo.appendChild(texto);
+			document.body.appendChild(titulo);
+			var titulo2 = document.createElement("h1");
+			var texto2 = document.createTextNode("Hola Mundo otra vez!");
+			titulo2.appendChild(texto2);
+			var titulos = document.getElementsByTagName("h1");
+			document.body.insertBefore(titulo2, titulos[0]);
+		</script>
+	</body>
+</html>
