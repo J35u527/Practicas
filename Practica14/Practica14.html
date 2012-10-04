@@ -33,6 +33,16 @@
 			elementoEtiqueta.appendChild(texto);
 			ElementoContenedor.appendChild(elementoEtiqueta);
 			
+			//labels para los input de nuevo telefono
+			
+			elementoEtiqueta = document.createElement('label'); 
+			elementoEtiqueta.id =  'etiquetaTel'+contador;
+			elementoEtiqueta.id =  'etiquetaTel'+contador;
+			texto = document.createTextNode("TELEFONO "+contador+" ");
+			elementoEtiqueta.appendChild(texto);
+			ElementoContenedor.appendChild(elementoEtiqueta);
+			
+			
 			//input text de nuevo telefono
 			elementoInput = document.createElement('input'); 
 			elementoInput.type = 'text'; 
@@ -41,22 +51,22 @@
 			ElementoContenedor.appendChild(elementoInput);
 			 
 			//su respectivo boton para borrarlo
-			elementoBoton = document.createElement('input'); 
-			elementoBoton.type = 'button'; 
-			elementoBoton.value = 'Borrar'; 
-			elementoBoton.name = 'div'+contador; 
-			elementoBoton.onclick = function () {
-				borrarCampo(this.name)
-				
-				} 
-			ElementoContenedor.appendChild(elementoBoton); 
+			elementoBoton = document.createElement('input');
+			elementoBoton.type = 'button';
+			elementoBoton.value = 'Borrar';
+			elementoBoton.name = 'div'
+			+contador;
+			elementoBoton.onclick = function() {
+			borrarCampo(this.name)
+	
 			}
-			
-			
-			function borrarCampo(obj) {
-				field  = document.getElementById('campoField'); 
-				field .removeChild(document.getElementById(obj)); 
-				contador--;		
+			ElementoContenedor.appendChild(elementoBoton);
+			}
+
+				function borrarCampo(obj) {
+					field = document.getElementById('campoField');
+					field.removeChild(document.getElementById(obj));
+					contador--;
 				}
 		</script>
         <noscript>Tu browser no soporta javaScript</noscript>
