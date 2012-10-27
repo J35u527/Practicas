@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-10-2012 a las 04:05:39
+-- Tiempo de generación: 27-10-2012 a las 03:59:12
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.3.13
 
@@ -16,9 +16,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+-- Base de datos: `dbConcursos`
 --
--- Base de datos: `mydb`
---
+CREATE DATABASE `dbConcursos` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `dbConcursos`;
 
 -- --------------------------------------------------------
 
@@ -167,7 +168,5 @@ ALTER TABLE `imagenes`
 --
 ALTER TABLE `usuario`
   ADD CONSTRAINT `fk_Usuario_Entrada1` FOREIGN KEY (`Entrada_idEntrada`) REFERENCES `entrada` (`idEntrada`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+--
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
