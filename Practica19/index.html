@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Selecciona usuario</title>
+<script type="text/javascript" src="js/validacion.js"></script>
+<link 	type="text/css" href="css/Principal.css" rel="stylesheet" >
+</head>
+<body>
+	<form name="buscarUsuario" method="get" action="php/consulta_usuario.php">
+		<label id="error-Id" class="error" >No es un número</label>
+		<label for="id_usuario">Escribe el id del usuario</label>
+		<input type="text" name="id_usuario" />
+		<button type="submit" value="enviar" hidden="hidden">Buscar</button>
+	</form>
+	<button value="buscar" onclick="validarForm()">Buscar</button>
+</body>
+</html>
